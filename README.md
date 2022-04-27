@@ -6,7 +6,7 @@ This project was done by [Janith Yapa](https://github.com/janithcyapa)
 
 install relavent packages
 ```bash
-    yarn dev
+    yarn
 ```
 
 ## Available Scripts
