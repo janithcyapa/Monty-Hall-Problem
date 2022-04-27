@@ -1,8 +1,8 @@
 import _ from "lodash";
 
 const result = [];
-let _total_runs = 25;
-let _runs_per_row = 100;
+let _total_runs = 10000;
+let _runs_per_row = 10000;
 
 const test = () => {
   let keep_count = 0;
@@ -54,3 +54,12 @@ const test = () => {
 })(_total_runs);
 
 console.table(result);
+
+const summary = {
+  keep: _.sumBy(result, "keep_count"),
+  switch: _.sumBy(result, "switch_count"),
+  runs: _.sumBy(result, "runs"),
+};
+
+console.table([summary]);
+
